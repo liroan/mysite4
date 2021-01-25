@@ -1,0 +1,64 @@
+@import variables.sass
+@import mixins.sass
+.bg-footer
+	background: #24241f
+	color: #d4d4d4
+	padding-top: 40px
+	p
+		font-size: 14px
+.up-footer
+	display: flex
+	justify-content: space-between
+	padding-bottom: 65px
+	border-bottom: 1px solid #50504c
+.left-up-foot
+	margin-left: 15px
+	width: 45%
+.card-left-up
+	display: flex
+	margin-bottom: 20px
+	a
+		color: #d4d4d4
+	p
+		margin-right: 50px
+.right-up-foot
+	margin-right: 15px
+.soc-seci
+	display: flex
+.sot-set
+	margin: 10px 5px 0 0
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	width: 30px
+	height: 30px
+	border: 1px solid #d4d4d4
+	border-radius: 3px
+.bottom-footer
+	margin: 30px 15px 0 15px
+	display: flex
+	justify-content: space-between
+	p 
+		margin-top: 20px
+		margin-right: 10px
+.right-bottom
+	display: flex
+@media screen and (max-width: 810px)
+	.contx11
+		width: 85%
+@media screen and (max-width: 619px)
+	.contx11
+		width: 90%
+	.bg-footer
+		p
+			font-size: 12px
+@media screen and (max-width: 512px)
+	.up-footer
+		flex-wrap: wrap
+		justify-content: center
+	.left-up-foot,.right-up-foot
+		width: 100%
+	.right-up-foot
+		text-align: center
+	.soc-seci
+		justify-content: center

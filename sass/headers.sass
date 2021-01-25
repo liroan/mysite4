@@ -1,0 +1,268 @@
+@import variables.sass
+@import mixins.sass
+@import asks.sass
+header 
+	background: url(../img/headers/bg.jpg) no-repeat 
+	background-size: cover
+	color: #fff
+	padding-bottom: 40px
+	position: relative
+.container
+	width: 60%
+	margin: 0 auto
+.top__part //верхняя часть
+	display: flex
+	justify-content: space-between
+.left-top-part-head //верхняя левая часть
+	display: flex
+	margin-top: 35px
+	p 
+		margin: 15px 0 0 10px
+		font-size: 28px
+		font-weight: 800
+.right-top-part-head //верхняя правая часть
+	display: flex
+	margin: 50px 0 0 15px
+.phone-part // телефон, текст и номер
+	display: flex
+.dispnone
+	display: none
+.phone__number //часть с номером телефона и текстом
+	margin: 0 60px 0 10px
+	p
+		&:first-child 
+			font-size: 12px
+		&:last-child 
+			font-size: 21px
+			font-weight: 500
+.menu-button-and-text // кнопка menu
+	position: absolute
+	right: 100%
+	cursor: pointer
+	p 
+		margin-bottom: 10px
+		font-size: 12px 
+		text-transform: uppercase
+		text-align: center
+		font-weight: 500
+.mbat2
+	display: none
+	right: 30%
+.content
+	position: relative
+	transition: 0.5s	
+	z-index: 0
+.content-active
+	transform: translateX(-20%)
+.menu-oll
+	z-index: 99
+	transform: translateX(100%)
+	transition: 0.5s
+	position: fixed
+	right: 0
+	top: 0
+	width: 30%
+	height: 100vh
+	background: #f9f9f9
+nav 
+	p 
+		text-align: center
+		&:first-child
+			margin-top: 5px
+.buttonNeon
+	text-align: center
+	display: inline-block
+	position: relative
+	color: #2196f3
+	letter-spacing: 2px
+	overflow: hidden
+	padding: 10px 20px
+	transition: 0.2s
+	&:hover 
+		box-shadow: 0 0 10px $bl, 0 0 40px $bl, 0 0 80px $bl
+		transition-delay: 1s
+		background: $bl
+		color: #fff
+		.button__line--top
+			left: 100%
+			transition: 1s
+			transition-delay: 0.25s
+		.button__line--bottom
+			right: 100%
+			transition: 1s
+			transition-delay: 0.25s
+		.button__line--left
+			bottom: 100%
+			transition: 1s
+			transition-delay: 0.25s
+		.button__line--right
+			top: 100%
+			transition: 1s
+			transition-delay: 0.25s
+.button__line
+	position: absolute
+	display: block
+.button__line--top
+	top: 0
+	left: -100%
+	width: 100%
+	height: 2px
+	background: linear-gradient(90deg,transparent,$bl)
+.button__line--bottom
+	bottom: 0
+	right: -100%
+	width: 100%
+	height: 2px
+	background: linear-gradient(270deg,transparent,$bl)
+.button__line--left
+	bottom: -100%
+	left: 0
+	width: 2px
+	height: 100%
+	background: linear-gradient(0deg,transparent,$bl)
+.button__line--right
+	top: -100%
+	right: 0
+	width: 2px
+	height: 100%
+	background: linear-gradient(180deg,transparent,$bl)
+.menu-oll-active 
+	transform: translateX(0%)
+.menu-btn  // кнопка menu
+	width: 50px
+	height: 50px
+	background: #fff
+	border-radius: 50% 
+	position: relative
+	span
+		@include menu-btn()
+		&::before, &::after
+			transition: 0.3s
+			@include menu-btn2()
+		&::before
+			transform: translateY(-5px)
+		&::after
+			transform: translateY(5px)
+.btnx2
+	background: $bl
+	span 
+		&::before, &::after
+			background: #fff
+.menu-btn-active
+	span 
+		height: 0
+		&::before 
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+////////////center
+.center__header  
+	text-align: center
+	margin-top: 70px
+	h1
+		line-height: 1
+		font-size: 48px
+		font-weight: 800
+		margin-bottom: 50px
+		span 
+			font-size: 36px
+	p 
+		font-size: 22px
+		font-weight: -100
+		margin-bottom: 50px
+.left-small-lines-head //маленькая полоска
+	@include lines-head3(30px, 1px, 16%, 4%)
+.right-small-lines-head //маленькая полоска
+	@include lines-head2(30px, 1px, 16%, 4%)
+.left-lines-head //длинная полоска
+	@include lines-head3(1px, 90px, 16%, 4%)
+.right-lines-head //длинная полоска
+	@include lines-head2(1px, 90px, 16%, 4%)
+.input__field 
+	text-align: center
+	input 
+		width: 25%
+		height: 50px
+		border-radius: 60px
+		border: none
+		margin: 0 10px 10px 0
+		padding-left: 30px
+		font-size: 13px
+	form
+	position: relative
+.main__button
+	margin: 20px 0 10px 0
+	input
+		padding: 0
+		background: #19b5fe
+		color: #fff
+		width: 233px
+		font-size: 16px
+		height: 60px
+.left-long-lin
+	@include lines-head3(33%, 1px, 75%, 4%)
+.right-long-lin
+	@include lines-head2(33%, 1px, 75%, 4%)
+.comment-under-button
+	text-align: center
+	p
+		font-size: 14px
+		margin-bottom: 80px
+@media screen and (max-width: 1600px)
+	nav 
+		p
+			font-size: 14px 
+	.left-long-lin
+		@include lines-head(25%, 1px)
+	.right-long-lin
+		@include lines-head(27%, 1px)
+@media screen and (max-width: 980px)
+	.menu-oll
+		width: 40%
+	.contx1
+		width: 90%
+	.input__field 
+		input 
+			width: 300px
+	.left-long-lin,.right-long-lin,.left-small-lines-head,.right-small-lines-head,.left-lines-head,.right-lines-head
+		display: none
+@media screen and (max-width: 590px)
+	nav 
+		p
+			font-size: 12px 
+			margin-bottom: 0
+	.menu-oll
+		width: 50%
+	.left-top-part-head
+		img 
+			width: 40px
+		p 
+			margin: 10px 0 0 5px
+			font-size: 18px
+	.right-top-part-head //верхняя правая часть
+		margin: 40px 0 0 15px
+	.phone__number //часть с номером телефона и текстом
+		margin: 0 20px 0 10px
+		p
+			&:first-child 
+				font-size: 10px
+			&:last-child 
+				font-size: 12px
+	.center__header  
+		h1
+			font-size: 36px
+			span 
+				font-size: 24px
+		p 
+			font-size: 16px
+	.input__field 
+		input 
+			width: 70%
+@media screen and (max-width: 400px)
+	nav 
+		p
+			font-size: 10px 
+			margin: 0 5px 0
+	header 
+		p 
+			font-size: 8px

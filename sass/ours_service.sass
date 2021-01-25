@@ -1,0 +1,90 @@
+@import variables.sass
+@import mixins.sass
+//@import headers.sass
+// вторая страница
+.repet_title //заголок на всех страницах
+	padding-top: 60px
+	text-align: center
+	font-size: 36px
+	color: #363636
+	&:after 
+		content: ""
+		display: block
+		width: 30%
+		margin: 20px auto 35px
+		height: 2px
+		background: $bl 
+.design-title  //красивый заголок рядом с картинками
+	font-size: 28px
+	color: $bl
+	margin: 15% 0 10px 0
+.repeat__button // синяя кнопка которая будет везде
+	width: 200px
+	height: 50px
+	background: $bl
+	box-sizing: border-box
+	border-radius: 50px
+	text-align: center
+	margin-top: 20px
+	cursor: pointer
+	p 
+		color: #fff
+		padding-top: 14px
+		font-size: 14px
+.text-serv //текст который рядом с картинками
+	p 
+		&:nth-child(2)
+			color: #595959
+			//margin-bottom: 25px
+	width: 49%
+	margin-right: 20px 
+	&:nth-child(2)
+		margin-left: 20px 
+.card-our-serv  // карточка с текстом и картинкой
+	display: flex
+	justify-content: space-between
+	margin-bottom: 20px
+	&:last-child 
+		margin-bottom: 70px
+.images-serv //картинка на карточке
+	width: 559px
+	img 
+		width: 100%
+@media screen and (max-width: 1300px)
+	.contx2
+		width: 85%
+@media screen and (max-width: 1200px)
+	.contx2
+		width: 90%
+	.images-serv
+		width: 470px
+		img 
+			width: 100%
+	.design-title
+		font-size: 22px
+	.text-serv
+		margin-bottom: 20px
+		font-size: 16px
+@media screen and (max-width: 900px)
+	.card-our-serv 
+		flex-wrap: wrap
+		&:nth-child(2)
+			flex-wrap: wrap-reverse
+		justify-content: center
+	.design-title,.text-serv
+	 	text-align: center
+	.repeat__button
+		margin: 15px auto 25px
+@media screen and (max-width: 415px)
+	.contx2
+		width: 97%
+	.repeat__button
+		width: 150px
+		margin: 15px auto 25px
+	.text-serv //текст который рядом с картинками
+		width: 80%
+		margin: 0 auto
+	.design-title
+		font-size: 18px
+	.text-serv
+		font-size: 14px

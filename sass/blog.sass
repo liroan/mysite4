@@ -1,0 +1,31 @@
+@import variables.sass
+@import mixins.sass
+.cards-blog
+	display: flex
+	justify-content: space-between
+.card-blog
+	width: 47%
+	img 
+		margin: 20px 0 20px
+		width: 100%
+	p
+		text-align: center
+		a 
+			color: $bl
+			&:hover 
+				
+				text-decoration: underline
+				cursor: pointer
+@media screen and (max-width: 1400px)
+	.contx8
+		width: 80%
+@media screen and (max-width: 999px)
+	.card-blog
+		width: 500px
+	.cards-blog
+		flex-wrap: wrap
+		justify-content: center
+@media screen and (max-width: 490px)
+	.card-blog
+		p 
+			font-size: 12px

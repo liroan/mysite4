@@ -1,0 +1,97 @@
+.repet_title {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 36px; }
+  .repet_title:after {
+    content: "";
+    display: block;
+    width: 30%;
+    margin: 20px auto 35px;
+    height: 2px;
+    background: #19b5fe; }
+
+.design-title {
+  font-size: 28px;
+  color: #19b5fe;
+  margin: 15% 0 10px 0; }
+
+.repeat__button {
+  width: 200px;
+  height: 50px;
+  background: #19b5fe;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50px;
+  cursor: pointer; }
+  .repeat__button p {
+    color: #fff;
+    padding-top: 17px;
+    text-align: center;
+    font-size: 14px; }
+
+.text-serv {
+  width: 49%;
+  margin-right: 20px; }
+  .text-serv p:nth-child(2) {
+    color: #595959;
+    margin-bottom: 25px; }
+  .text-serv:nth-child(2) {
+    margin-left: 20px; }
+
+.card-our-serv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  .card-our-serv:last-child {
+    margin-bottom: 70px; }
+
+.images-serv {
+  width: 559px; }
+  .images-serv img {
+    width: 100%; }
+
+@media screen and (max-width: 1200px) {
+  .contx2 {
+    width: 90%; }
+  .images-serv {
+    width: 470px; }
+    .images-serv img {
+      width: 100%; } }
+
+@media screen and (max-width: 900px) {
+  .card-our-serv {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .card-our-serv:nth-child(2) {
+      -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
+  .design-title, .text-serv {
+    text-align: center; }
+  .repeat__button {
+    margin: 0 auto;
+    margin-bottom: 15px; }
+  .design-title {
+    font-size: 22px; }
+  .text-serv {
+    font-size: 16px; } }
+
+@media screen and (max-width: 415px) {
+  .contx2 {
+    width: 97%; }
+  .repeat__button {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 15px; }
+  .text-serv {
+    width: 80%;
+    margin: 0 auto; } }
+
+.calculate__price {
+  background: url(../img/calculate-price/bg.jpg); }

@@ -1,0 +1,70 @@
+@import mixins.sass
+.bg-why-me
+	background: #f5f9fa
+	padding-bottom: 75px
+.cards-why-me-up, .cards-why-me-down
+	display: flex
+	justify-content: space-between
+.card-why-me
+	width: 270px
+	text-align: center
+	p 
+		font-size: 14px
+		font-weight: 800
+		color: #3f3f3f
+	.repet_title
+		&:after 
+			width: 50%
+			margin-top: 10px
+			margin-bottom: 20px
+.img-why-me
+	width: 80px
+	height: 70px
+	margin: 0 auto
+	position: relative
+	img 
+		display: block
+		margin: 0 auto
+.cards-why-me-down
+	justify-content: center
+	.repet_title
+		&:after 
+			width: 30%
+.blue-point
+	width: 35px
+	height: 35px
+	background: #63d4f5
+	border-radius: 30px
+	position: absolute
+	opacity: 0.5
+.bp1 
+	@include blue-point1(0)
+.bp2
+	@include blue-point4(0)
+.bp3
+	@include blue-point3(0)
+.bp4 
+	@include blue-point2(20%)
+.bp5
+	@include blue-point2(0)
+.bp6
+	@include blue-point4(0)
+@media screen and (max-width: 790px)
+	.contx5
+		width: 90%
+	.card-why-me
+		p 
+			font-size: 12px
+@media screen and (max-width: 590px)
+	.card-why-me
+		p 
+			font-size: 14px
+	.contx5
+		width: 95%
+	.cards-why-me-up, .cards-why-me-down
+		flex-wrap: wrap
+		justify-content: center
+	.cards-why-me-down
+		.repet_title
+			&:after 
+				width: 50%

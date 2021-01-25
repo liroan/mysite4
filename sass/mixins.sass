@@ -1,0 +1,40 @@
+@mixin lines-head($w, $h)
+		content: ""
+		display: inline-block
+		width: $w
+		height: $h 
+		background: #7f7b78
+@mixin lines-head2($w, $h, $top, $right)
+		@include lines-head($w, $h)
+		position: absolute
+		top: $top
+		right: $right
+@mixin lines-head3($w, $h, $top, $left)
+		@include lines-head($w, $h)
+		position: absolute
+		top: $top
+		left: $left
+@mixin blue-point1($top)
+	top: $top
+	right: 0
+@mixin blue-point2($top)
+	top: $top
+	left: 0
+@mixin blue-point3($bottom)
+	bottom: $bottom
+	right: 0
+@mixin blue-point4($bottom)
+	bottom: $bottom
+	left: 0
+@mixin menu-btn()
+	position: absolute
+	top: 50% 
+	margin-top: -1px 
+	margin-left: -10px 
+	left: 50%
+	width: 20px
+	height: 2px
+	background: #222
+@mixin menu-btn2()
+	content: " "
+	@include menu-btn()

@@ -1,0 +1,119 @@
+@import variables.sass
+@import mixins.sass
+.sorting_options_img // рамка с категориями фото
+	display: flex
+	justify-content: center
+	align-items: center
+	border: 2px solid $bl
+	border-radius: 30px
+	width: 79%
+	height: 42px
+	margin: 0 auto 0
+	padding: 3px 0
+	color: #38bffe
+	cursor: pointer
+.bg-and-text 
+	position: relative
+	p // текст категорий фото
+		text-align: center
+		padding: 12px 37px
+		line-height: 1.2
+		font-size: 14px
+		text-transform: uppercase
+		border-right: 2px solid $bl
+		max-height: 20px
+	&:first-child
+		p
+			padding: 12px 37px
+	&:last-child
+		p
+			border-right: none
+	&:hover
+		box-sizing: border-box
+		color: #fff
+		height: 60px
+		position: relative
+		top: 0
+		padding-top: 11px
+		background: $bl
+		border-radius: 10px
+		transition: 0.3s 
+.options-img
+	perspective: 1000px
+.img-port
+	transition: 1s
+	position: relative
+	right: -10%
+	transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg) 
+	transform-style: preserve-3d
+	display: flex
+	justify-content: space-between
+	margin-bottom: 25px
+	flex-wrap: wrap
+	&:last-child
+		margin-bottom: 300px
+	img 
+		display: block
+		width: 32%
+		margin-bottom: 20px
+		&:hover 
+			opacity: 0.8
+			transition: 0.3s
+			cursor: pointer
+			transform: translateZ(15px)
+.img-port-notactive 
+	transform: rotate(0)
+	right: 0
+	&:first-child
+		margin-top: 50px
+	&:last-child
+		margin-bottom: 75px
+.img-port-notactive2
+	left: -10%
+	transform: rotateX(55deg) rotateZ(45deg) rotateY(-10deg) 
+.img-port2
+	margin-top: 25px 
+	img 
+		margin-right: 10px
+	justify-content: center
+@media screen and (max-width: 1600px)
+	.contx4
+		width: 75%
+@media screen and (max-width: 1120px)
+	.contx4
+		width: 85%
+	.bg-and-text 
+		p // текст категорий фото
+			padding: 12px 25px
+			font-size: 12px
+		&:first-child
+			p
+				padding: 12px 25px
+@media screen and (max-width: 890px)
+	.img-port
+		&:last-child
+			margin-bottom: 70px
+	.contx4
+		width: 90%
+	.bg-and-text 
+		p // текст категорий фото
+			padding: 12px 10px
+		&:first-child
+			p
+				padding: 12px 10px
+@media screen and (max-width: 613px)
+	.sorting_options_img
+		width: 98%
+		margin: 0 auto 25px
+	.bg-and-text 
+		p // текст категорий фото
+			padding: 12px 5px
+
+			min-height: 20px
+		&:first-child
+			p
+				padding: 12px 5px
+@media screen and (max-width: 480px)
+	.bg-and-text 
+		p // текст категорий фото
+			font-size: 8px

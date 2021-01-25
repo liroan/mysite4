@@ -1,0 +1,66 @@
+@import variables.sass
+@import mixins.sass
+.cards-our-team
+	display: flex
+	justify-content: space-between
+.card-our-team
+	p 
+		text-align: center
+		&:nth-child(2)
+			margin: 15px 0 5px
+			font-size: 24px
+			color: $bl
+		&:last-child
+			font-size: 16px
+			color: $black
+			margin-bottom: 60px
+	img 
+		border-radius: 50%
+		cursor: pointer
+		transition: 0.5s
+		
+		&:hover 
+			width: 250px
+			height: 250px
+			border: 30px solid #fff
+			box-shadow: 5px 5px 10px 5px #b3b3b3
+.comment-our-team
+	width: 100%
+	text-align: center
+	position: relative
+	padding: 15px 100px 
+	box-sizing: border-box
+	margin-bottom: 70px
+	color: $black
+	p 
+		&:nth-child(2)
+			font-size: 30px 
+			margin-bottom: 12px
+		&:nth-child(4)
+			font-weight: 800
+			margin: 15px 0 5px
+		&:nth-child(5)
+			font-size: 16px
+	img 
+		position: absolute
+		&:first-child
+			top: 0
+			left: 0
+		&:last-child
+			bottom: 0
+			right: 0
+@media screen and (max-width: 1400px)
+	.contx7
+		width: 85%
+@media screen and (max-width: 880px)
+	.cards-our-team
+		flex-wrap: wrap
+		justify-content: center
+@media screen and (max-width: 430px)
+	.comment-our-team
+		padding: 15px 60px 
+		p 
+			&:nth-child(2)
+				font-size: 25px 
+			&:nth-child(5)
+				font-size: 12px
